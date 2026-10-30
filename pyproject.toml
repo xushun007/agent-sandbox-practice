@@ -1,0 +1,18 @@
+[project]
+name = "sandbox-practice"
+version = "0.1.0"
+description = "Lifecycle and state experiments for Modal sandboxes and Navi Agent"
+requires-python = ">=3.12"
+dependencies = [
+  "modal[api-proxy-support]>=1.5.3",
+]
+
+[project.scripts]
+sandbox-practice = "sandbox_practice.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sandbox_practice"]
